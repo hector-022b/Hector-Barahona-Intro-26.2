@@ -1,0 +1,176 @@
+/* ---------- GENERAL PAGE STYLING ---------- */
+body {
+    background: maroon;
+    color: white;
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+h1 {
+    font-family: 'Mystery Quest', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: gold;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    background-color: #5c0000;
+    padding: 20px;
+    border-radius: 15px;
+    text-shadow: 3px 3px red;
+}
+
+
+/* ---------- SUBTITLE ---------- */
+.subtitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
+    margin-top: -10px;
+}
+
+.subtitle span:hover {
+    color: gold;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* ---------- SECTION STYLING ---------- */
+section {
+    margin: 40px 0;
+    padding: 20px;
+}
+
+
+/* ---------- HEADINGS ---------- */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+
+
+/* ---------- ABOUT SECTION ---------- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #5c0000;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.about-text {
+    flex: 1;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.profile-pic {
+    width: 240px;
+    border-radius: 20px;
+    border: 4px solid gold;
+}
+
+
+/* ---------- CONNECT SECTION ---------- */
+
+#connect {
+    text-align: center;
+}
+
+
+/* ---------- SOCIAL ICONS ---------- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: gold;
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: lightgray;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+/* ---------- STICKY HEADER ---------- */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #5c0000;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+
+/* ---------- EXPERIENCE SECTION ---------- */
+.experience-card {
+    background-color: #5c0000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-top h3 {
+    color: gold;
+}
+
+.experience-top p {
+    font-weight: bold;
+}
+
+
+/* ---------- SKILLS & PROJECTS ---------- */
+#skills,
+#projects {
+    background-color: #5c0000;
+    padding: 20px;
+    border-radius: 15px;
+}
