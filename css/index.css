@@ -167,10 +167,49 @@ header {
 }
 
 
-/* ---------- SKILLS & PROJECTS ---------- */
-#skills,
-#projects {
+/* ---------- SKILLS LIST ---------- */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+#skills li {
     background-color: #5c0000;
-    padding: 20px;
-    border-radius: 15px;
+    border: 2px solid gold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    background-color: gold;
+    color: maroon;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 180px;
+    }
+
+    #skills ul {
+        justify-content: center;
+    }
 }
