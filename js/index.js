@@ -68,7 +68,6 @@ messageForm.addEventListener("submit", function (event) {
         messageSpan.innerText = newText;
 });
 
-    newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
     newMessage.appendChild(editButton);
