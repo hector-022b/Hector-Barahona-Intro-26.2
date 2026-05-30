@@ -213,3 +213,105 @@ header {
         justify-content: center;
     }
 }
+
+/* ---------- MESSAGE FORM ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background-color: #5c0000;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: gold;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    background-color: gold;
+    color: maroon;
+
+    border: none;
+    padding: 12px;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: white;
+}
+
+/* ---------- MESSAGES SECTION ---------- */
+
+#messages ul {
+    list-style: none;
+    padding: 0;
+}
+
+#messages li {
+    background-color: #5c0000;
+
+    margin: 15px 0;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+#messages a {
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#messages a:hover {
+    color: white;
+}
+
+#messages button {
+    background-color: gold;
+    color: maroon;
+
+    border: none;
+    padding: 8px 12px;
+
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#messages button:hover {
+    background-color: white;
+}
+
+#messages {
+    display: none;
+}
