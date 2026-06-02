@@ -97,5 +97,13 @@ fetch("https://api.github.com/users/hector-022b/repos")
 
     .catch(function (error) {
         console.log(error);
+
+        const projectList = document.querySelector("#projects ul");
+        const errorMessage = document.createElement("li");
+
+        errorMessage.innerHTML = "Unable to load projects right now.";
+        errorMessage.style.color = "white";
+        errorMessage.style.backgroundColor = "red";
+
+        projectList.appendChild(errorMessage);
     })
-    
