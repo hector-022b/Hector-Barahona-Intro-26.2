@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>World Cup Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hector's CTD Assignmnet Portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/api-worldcup.css" rel="stylesheet"> 
+
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Rubik+Distressed&display=swap" rel="stylesheet">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#countdown">Countdown</a></li>
+                    <li><a href="#players">Players</a></li>
+                    <li><a href="#player-info">Player Info</a></li>
+                    <li><a href="#extra-content">Career & Trophies</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>⚽ World Cup 2026 Tracker</h1>
+
+    <section id="countdown">
+        <h2>Countdown to World Cup 2026</h2>
+        <p id="timer"></p>
+    </section>
+
+    <section id="players">
+
+    <h2>Top Players To Watch For:</h2>
+        <div class="button-container">
+
+            <button data-id="154">Lionel Messi</button>
+            <button data-id="874">Cristiano Ronaldo</button>
+            <button data-id="153">Ousmane Dembélé</button>
+            <button data-id="386828">Lamine Yamal</button>
+            <button data-id="762">Vinicius Jr</button>
+            <button data-id="17">Christian Pulisic</button>
+
+        </div>
+    </section>
+
+    <section id="player-info">
+        <h2>Player Information</h2>
+
+        <div id="player-card"></div>
+        <div id="player-buttons">
+
+            <button id="career-btn">Career Journey</button>
+            <button id="trophy-btn">Trophy Cabinet</button>
+            
+        </div>
+
+        <div id="extra-content"></div>
+
+
+    </section>
+    <script src="js/api-worldcup.js"></script>
+    </body>
+</html>

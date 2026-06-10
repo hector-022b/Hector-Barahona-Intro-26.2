@@ -1,0 +1,315 @@
+body {
+    background-color: maroon;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+h1, h2 {
+    color: gold;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: gold;
+    color: maroon;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* ---------- STICKY HEADER ---------- */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #5c0000;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 180px;
+    }
+
+    #skills ul {
+        justify-content: center;
+    }
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: lightgray;
+}
+
+
+/* ---------- COUNTDOWN SECTION ---------- */
+
+#countdown {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.countdown-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background-color: #5c0000;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.countdown-box div {
+    background-color: maroon;
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 90px;
+}
+
+.countdown-box span {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+}
+
+.countdown-box p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: white;
+}
+
+/* ---------- PLAYER CARD ---------- */
+
+.player-card {
+    background-color: #5c0000;
+
+    border: 2px solid gold;
+    border-radius: 20px;
+
+    padding: 25px;
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+/* ---------- PLAYER IMAGE ---------- */
+
+.player-card img {
+    width: 180px;
+
+    border-radius: 15px;
+
+    border: 3px solid gold;
+
+    margin-bottom: 15px;
+}
+
+/* ---------- PLAYER NAME ---------- */
+
+.player-card h3 {
+    color: gold;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+/* ---------- PLAYER INFO ---------- */
+
+.player-card p {
+    font-size: 18px;
+
+    margin: 10px 0;
+
+    line-height: 1.6;
+}
+
+/* ---------- PLAYER DESCRIPTION ---------- */
+
+.player-card p:last-of-type {
+    background-color: maroon;
+
+    border-left: 4px solid gold;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+    font-style: italic;
+}
+
+/* ---------- PLAYER ACTION BUTTONS ---------- */
+
+#player-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+/* ---------- EXTRA CONTENT SECTION ---------- */
+
+#extra-content {
+    background-color: #5c0000;
+
+    border: 2px solid gold;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    line-height: 1.8;
+
+    text-align: left;
+}
+
+/* ---------- EXTRA CONTENT TITLES ---------- */
+
+#extra-content h4 {
+    color: gold;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    border-bottom: 2px solid gold;
+
+    padding-bottom: 10px;
+}
+
+/* ---------- CAREER / TROPHY TEXT ---------- */
+
+#extra-content p {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    background-color: maroon;
+
+    padding: 18px;
+
+    border-left: 4px solid gold;
+
+    border-radius: 12px;
+}
+
+/* ---------- TROPHY LIST ---------- */
+
+#trophy-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin-top: 20px;
+}
+
+/* ---------- TROPHY ITEMS ---------- */
+
+#trophy-list li {
+    background-color: maroon;
+
+    border: 2px solid gold;
+
+    border-radius: 12px;
+
+    padding: 14px;
+
+    margin-bottom: 14px;
+
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+#trophy-list li:hover {
+    background-color: gold;
+
+    color: maroon;
+
+    transform: scale(1.03);
+}
+
+/* CAREER SECTION */
+.career-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #5c0000;
+    border: 2px solid gold;
+    border-radius: 15px;
+}
+
+/* spacing between paragraphs */
+.career-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* header */
+.career-section h4 {
+    color: gold;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid gold;
+    padding-bottom: 8px;
+}
