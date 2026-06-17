@@ -68,7 +68,6 @@ const playerDescriptions = {
 };
 
 /* Career Breakdowns */
-
 const playerCareers = {
 
     154: `Lionel Messi is widely regarded as the greatest footballer of all time, often called the GOAT due to his unmatched consistency, creativity, and record-breaking achievements. He joined FC Barcelona's La Masia academy as a child and quickly became the centerpiece of a golden generation. From his debut in 2004, Messi redefined attacking football with his dribbling, vision, and goal scoring ability.
@@ -168,32 +167,37 @@ Career Timeline:
 </ul>`
 };
 
-/* Player Buttons */
+/* API Configuration */
+const API_KEY = "229786b58ef1834a44d9594bc19096eb";
 
+const API_HEADERS = {
+    "x-apisports-key": API_KEY
+};
+
+
+/* Player Buttons */
 const buttons = document.querySelectorAll("#players button");
 
 buttons.forEach((button) => {
 
     button.addEventListener("click", function () {
+        
+        const extraContent = document.getElementById("extra-content");
+        extraContent.innerHTML = ""; // clear previous career/trophy view
 
         const playerId = button.dataset.id;
 
         /* FIRST GET REQUEST */
-
         fetch(`https://v3.football.api-sports.io/players/profiles?player=${playerId}`, {
 
             method: "GET",
 
-            headers: {
-                "x-apisports-key": "229786b58ef1834a44d9594bc19096eb"
-            }
+            headers: API_HEADERS
         })
 
         .then((res) => res.json())
 
         .then((data) => {
-
-            console.log(data);
 
             const playerCard = document.getElementById("player-card");
 
@@ -230,7 +234,6 @@ buttons.forEach((button) => {
 
 
             /* Career Button */
-
             const careerBtn = document.getElementById("career-btn");
 
             careerBtn.onclick = function () {
@@ -238,7 +241,7 @@ buttons.forEach((button) => {
                 extraContent.innerHTML =
                     `<div class="career-section">
                         <h4>Career Journey</h4>
-                        <p>${playerCareers[playerId].replaceAll("\n\n", "</p><p>")}</p>
+                        <p>${playerCareers[playerId].split("\n\n").join("</p><p>")}</p>
                     </div>`;
             };
 
@@ -253,16 +256,12 @@ buttons.forEach((button) => {
 
                     method: "GET",
 
-                    headers: {
-                        "x-apisports-key": "229786b58ef1834a44d9594bc19096eb"
-                    }
+                    headers: API_HEADERS
                 })
 
                 .then((res) => res.json())
 
                 .then((trophyData) => {
-
-                    console.log(trophyData);
 
                     const winners = trophyData.response.filter((trophy) => {
                         return trophy.place === "Winner";
@@ -307,8 +306,6 @@ buttons.forEach((button) => {
                 })
 
                 .catch((error) => {
-
-                    console.log(error);
                     extraContent.innerHTML = `
                         <p>Unable to load trophies.</p>
                     `;
@@ -319,7 +316,6 @@ buttons.forEach((button) => {
         })
 
         .catch((error) => {
-            console.log(error);
             const playerCard = document.getElementById("player-card");
             playerCard.innerHTML = "<p>Something went wrong loading player data.</p>";
         });
@@ -327,3 +323,4 @@ buttons.forEach((button) => {
     });
 
 });
+

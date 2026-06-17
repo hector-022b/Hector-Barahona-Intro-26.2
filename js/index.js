@@ -2,7 +2,7 @@
 const footer = document.createElement("footer");
 document.body.appendChild(footer);
 
-/* Creates the Year */
+/* Get Current Year For Dynamic Copyright Footer */
 const today = new Date();
 const thisYear = today.getFullYear();
 
@@ -20,6 +20,7 @@ const skillsSection = document.getElementById("skills");
 
 const skillsList = skillsSection.querySelector("ul");
 
+/* Loop Through Skills Array and Display Each Skill */
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement("li");
     skill.innerText = skills[i];
@@ -28,8 +29,9 @@ for (let i = 0; i < skills.length; i++) {
 
 const messageForm = document.querySelector('form[name="leave_message"]'); 
 
+/* Handle Message Form Submission */
 messageForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    event.preventDefault(); /* Prevent Page Refresh on Form Submit */
 
     const usersName = event.target.usersName.value;
     const usersEmail = event.target.usersEmail.value;
@@ -51,6 +53,7 @@ messageForm.addEventListener("submit", function (event) {
     removeButton.innerText = "remove";
     removeButton.type = "button";
 
+    /* Delete Message When Remove Button Is Clicked */
     removeButton.addEventListener("click", function () {
         const entry = removeButton.parentNode;
         entry.remove();
@@ -59,6 +62,7 @@ messageForm.addEventListener("submit", function (event) {
         }
     });
 
+    /* Edit Existing Message */
     const editButton = document.createElement("button");
     editButton.innerText = "edit";
     editButton.type = "button";
@@ -78,6 +82,7 @@ messageForm.addEventListener("submit", function (event) {
     messageForm.reset();
 });
 
+/* Fetch GitHub Repositories Using GitHub API */
 fetch("https://api.github.com/users/hector-022b/repos")
     .then(function (response) {
         return response.json();
@@ -95,6 +100,7 @@ fetch("https://api.github.com/users/hector-022b/repos")
         }
     })
 
+    /* Handle API Errors */
     .catch(function (error) {
         console.log(error);
 
